@@ -6,9 +6,9 @@
 
 function unfollowEveryone(){
 	const spanTags = document.querySelectorAll('span');
-
+	
 	spanTags.forEach(isFollowing)
-
+	
 	function isFollowing(currentElement){
 		if(currentElement.outerText == 'Following'){
 			currentElement.click();
@@ -18,15 +18,15 @@ function unfollowEveryone(){
 }
 
 function unfollowClick(){
-		const innerSpanTags = document.querySelectorAll('span');
-
-		innerSpanTags.forEach(unfollow)
-
-		function unfollow(currentElement){
-			if(currentElement.outerText == 'Unfollow'){
-				currentElement.click();
-			}
+	const innerSpanTags = document.querySelectorAll('span');
+	
+	innerSpanTags.forEach(unfollow)
+	
+	function unfollow(currentElement){
+		if(currentElement.outerText == 'Unfollow'){
+			currentElement.click();
 		}
 	}
+}
 	
 setInterval(unfollowEveryone, 1000);
